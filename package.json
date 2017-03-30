@@ -1,0 +1,35 @@
+{
+  "name": "async-iterable-map",
+  "version": "1.4.1",
+  "description": "An iterable transform that spread each iterable received and emit its items",
+  "scripts": {
+    "test": "rollup -c && ava && xo --ignore example.js --ignore index.js",
+    "setup": "rollup -c"
+  },
+   "keywords": [
+    "iterable",
+    "spread",
+    "flatmap",
+    "map",
+    "functional",
+    "curry"
+  ],
+  "author": "Andrea Parodi <andrea@parro.it>",
+  "license": "MIT",
+  "dependencies": {
+    "curry": "^1.2.0"
+  },
+  "files": [
+    "main.js",
+    "index.js",
+    "example.js"
+  ],
+  "tonicExampleFilename": "example.js",
+  "jsnext:main": "main.js",
+  "devDependencies": {
+    "ava": "^0.18.2",
+    "rollup": "^0.41.6",
+    "xo": "^0.18.1"
+  },
+  "repository": "parro-it/async-iterable-map"
+}
