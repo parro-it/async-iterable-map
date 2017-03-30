@@ -6,7 +6,7 @@
     "test": "rollup -c && ava && xo --ignore example.js --ignore index.js",
     "setup": "rollup -c"
   },
-   "keywords": [
+  "keywords": [
     "iterable",
     "spread",
     "flatmap",
@@ -26,9 +26,29 @@
   ],
   "tonicExampleFilename": "example.js",
   "jsnext:main": "main.js",
+  "xo": {
+    "parser": "babel-eslint"
+  },
+  "babel": {
+    "presets": [
+      "stage-3"
+    ]
+  },
+  "ava": {
+     "babel": {
+       "presets": [
+          "@ava/stage-4",
+          "@ava/transform-test-files",
+          "stage-3"
+       ]
+     }
+  },
   "devDependencies": {
     "ava": "^0.18.2",
+    "babel-eslint": "^7.2.1",
+    "babel-preset-stage-3": "^6.22.0",
     "rollup": "^0.41.6",
+    "rollup-plugin-async": "^1.2.0",
     "xo": "^0.18.1"
   },
   "repository": "parro-it/async-iterable-map"
